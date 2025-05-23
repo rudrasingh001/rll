@@ -1,56 +1,65 @@
+//
+//
+//package com.booksWagon.hooks;
+//
+//import com.booksWagon.utils.DriverManager;
+//import io.cucumber.java.After;
+//import io.cucumber.java.Before;
+//import io.cucumber.java.Scenario;
+//import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.TakesScreenshot;
+//
+//public class HookClass {
+//
+//    @Before
+//    public void setup() {
+//        DriverManager.getDriver();
+//    }
+//
+//    @After
+//    public void tearDown(Scenario scenario) {
+//        if (scenario.isFailed()) {
+//            final byte[] screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot, "image/png", scenario.getName());
+//        }
+//        DriverManager.quitDriver();
+//    }
+//}
+//
+//
+//
+
+
 package com.booksWagon.hooks;
 
-
 import com.booksWagon.utils.DriverManager;
-import com.booksWagon.utils.ExtentManager;
-import com.booksWagon.utils.Log;
-import com.booksWagon.utils.ScreenshotUtils;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import io.cucumber.java.*;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 public class HookClass {
+    private WebDriver driver;
 
-    public static WebDriver driver;
-    public static ExtentReports extent;
-    public static ExtentTest test;
-
-    @BeforeSuite
-    public static void beforeAll() {
-        Log.startLog();
-        extent = ExtentManager.getInstance();
-        Log.info("Extent Report Initialized");
+    @Before(order = 1)
+    public void setup() {
+        driver = DriverManager.getDriver();
+//        driver.manage().window().maximize(); // Ensuring window maximized before tests
     }
 
-    @Before
-    public void setUp(Scenario scenario) {
-        driver = DriverManager.getDriver();
-        Log.info("Driver Initialized");
-        test = extent.createTest(scenario.getName());
+    @Before(order = 2, value = "@Signup") // Ensures Signup scenarios start from correct page
+    public void navigateToSignupPage() {
+        driver.get("https://www.bookswagon.com/register");
     }
 
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
-            String screenshotPath = ScreenshotUtils.captureScreenshot(driver, scenario.getName().replaceAll(" ", "_"));
-            test.fail("Scenario failed. Screenshot attached.")
-                .addScreenCaptureFromPath(screenshotPath);
-            Log.error("Scenario failed: " + scenario.getName());
-        } else {
-            test.pass("Scenario passed.");
-            Log.info("Scenario passed: " + scenario.getName());
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "Failed Scenario: " + scenario.getName());
         }
-        driver.quit();
-        Log.info("Driver quit");
-    }
-
-    @AfterSuite
-    public static void afterAll() {
-        extent.flush();
-        Log.info("Extent Report flushed");
+        DriverManager.quitDriver();
     }
 }

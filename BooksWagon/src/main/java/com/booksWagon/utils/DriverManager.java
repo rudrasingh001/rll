@@ -1,24 +1,48 @@
+//package com.booksWagon.utils;
+// 
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.edge.EdgeDriver;
+// 
+//public class DriverManager {
+//    private static WebDriver driver;
+// 
+// 
+//    private DriverManager() { } // Private constructor to prevent instantiation
+// 
+//    public static WebDriver getDriver() {
+//        if (driver == null) {
+//            driver = new EdgeDriver();
+//        }
+//        return driver;
+//    }
+// 
+//    public static void quitDriver() {
+//        if (driver != null) {
+//            driver.quit();
+//            driver = null;
+//        }
+//    }
+//}
+
+
 package com.booksWagon.utils;
-
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+ 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.edge.EdgeDriver;
+ 
 public class DriverManager {
-
     private static WebDriver driver;
-
+ 
+ 
+    private DriverManager() { } // Private constructor to prevent instantiation
+ 
     public static WebDriver getDriver() {
         if (driver == null) {
-            // You can extend this to use config properties for browser choice
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
+            driver = new EdgeDriver();
         }
         return driver;
     }
-
+ 
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
@@ -26,3 +50,4 @@ public class DriverManager {
         }
     }
 }
+ 

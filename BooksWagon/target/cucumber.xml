@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="9" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="68.234">
+    <testcase classname="User Registration Functionality" name="User can signup with valid inputs" time="55.774">
+        <failure message="Expected condition failed: waiting for visibility of element located by By.id: ctl00_phBody_SignUp_txtPassword (tried for 30 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57163}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57163/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5b02f1e3be3357dc957585d1e9de45bb" type="org.openqa.selenium.TimeoutException"><![CDATA[Given User is on the BooksWagon registration page...........................passed
+When User enters valid name "valid_name", mobile number "valid_mobile", and signup password "valid_password".failed
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+And User enters OTP "valid_otp".............................................skipped
+And User enters signup password "valid_password"............................skipped
+And User enters confirm password "valid_password"...........................skipped
+And User clicks on Signup button............................................skipped
+Then User should be registered successfully.................................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: ctl00_phBody_SignUp_txtPassword (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57163}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57163/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b02f1e3be3357dc957585d1e9de45bb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.booksWagon.pages.Register.enterSignupPassword(Register.java:115)
+	at com.booksWagon.stepDefinition.RegisterStepDefinition.user_enters_valid_registration_data(RegisterStepDefinition.java:278)
+	at ✽.User enters valid name "valid_name", mobile number "valid_mobile", and signup password "valid_password"(file:///C:/Users/rudra.singh/eclipse-workspace/BooksWagon/src/test/resources/features/Register.feature:71)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with invalid name input" time="11.828">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/login?q=signup}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................failed
+When User enters an invalid name "invalid_name", mobile number "valid_mobile", and signup password "valid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+Then User should see an error message "invalid_name_msg"....................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/login?q=signup}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.stepDefinition.RegisterStepDefinition.user_is_on_registration_page(RegisterStepDefinition.java:269)
+	at ✽.User is on the BooksWagon registration page(file:///C:/Users/rudra.singh/eclipse-workspace/BooksWagon/src/test/resources/features/Register.feature:82)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with invalid mobile number" time="0.022">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", invalid mobile number "invalid_mobile", and signup password "valid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+Then User should see an error message "invalid_mobile_msg"..................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup without selecting captcha" time="0.035">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", mobile number "valid_mobile", and signup password "valid_password".skipped
+And User skips captcha selection............................................skipped
+And User clicks on Continue button..........................................skipped
+Then User should see an error message "captcha_required_msg"................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with invalid OTP" time="0.039">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", mobile number "valid_mobile", and signup password "valid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+And User enters OTP "invalid_otp"...........................................skipped
+And User enters signup password "valid_password"............................skipped
+And User enters confirm password "valid_password"...........................skipped
+And User clicks on Signup button............................................skipped
+Then User should see an error message "invalid_otp_msg".....................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with invalid signup password" time="0.035">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", mobile number "valid_mobile", and signup password "invalid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+And User enters OTP "valid_otp".............................................skipped
+And User enters signup password "valid_password"............................skipped
+And User enters confirm password "valid_password"...........................skipped
+And User clicks on Signup button............................................skipped
+Then User should see an error message "invalid_password_msg"................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with different confirm password" time="0.024">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", mobile number "valid_mobile", and signup password "valid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+And User enters OTP "valid_otp".............................................skipped
+And User enters signup password "valid_password"............................skipped
+And User enters confirm password "mismatch_password"........................skipped
+And User clicks on Signup button............................................skipped
+Then User should see an error message "password_mismatch_msg"...............skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with null inputs" time="0.017">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User leaves all required fields empty..................................skipped
+And User clicks on Continue button..........................................skipped
+Then User should see an error message "empty_fields_msg"....................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+    <testcase classname="User Registration Functionality" name="User tries to signup with mobile number exceeding 10 digits" time="0.019">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=136.0.3240.76)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6c3094ce5b6d9c495873288b7b0aa787" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on the BooksWagon registration page...........................skipped
+When User enters valid name "valid_name", mobile number "invalid_mobile_length", and signup password "valid_password".skipped
+And User selects the captcha manually.......................................skipped
+And User clicks on Continue button..........................................skipped
+Then User should see an error message "invalid_mobile_length_msg"...........skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=136.0.3240.76)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6c3094ce5b6d9c495873288b7b0aa787, get {url=https://www.bookswagon.com/register}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57269}, msedge: {msedgedriverVersion: 136.0.3240.76 (77e9ec69748f..., userDataDir: C:\Users\RUDRA~1.SIN\AppDat...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57269/devtoo..., se:cdpVersion: 136.0.3240.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c3094ce5b6d9c495873288b7b0aa787
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.booksWagon.hooks.HookClass.navigateToSignupPage(HookClass.java:54)
+]]></failure>
+    </testcase>
+</testsuite>
